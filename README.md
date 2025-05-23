@@ -26,6 +26,7 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 ## Getting Started
 
 ### Prerequisites
+
 - Required Python packages (install using `pip install -r requirements.txt`)
 - AWS credentials configured
 - API keys for external services (Tavily)
@@ -34,9 +35,11 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 
 1. Clone this repository
 2. Install dependencies:
+
    ```
    pip install -r requirements.txt
    ```
+
 3. Set up environment variables:
    - Copy `.env.example` to `.env`
    - Add your API keys to the `.env` file
@@ -45,17 +48,20 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 ### Running the Application
 
 1. Start the MCP servers (Model Context Protocol servers that connect to external data sources):
+
    ```
    python application/launcher.py
    ```
+
    This will launch all necessary MCP servers for arXiv, PubMed, ChEMBL, ClinicalTrials.gov, and Tavily.
 
 2. Start the Streamlit web interface:
+
    ```
    streamlit run application/app.py
    ```
 
-3. Open your browser and navigate to the URL displayed in the terminal (typically http://localhost:8501)
+3. Open your browser and navigate to the URL displayed in the terminal (typically <http://localhost:8501>)
 
 ## Using the Drug Discovery Agent
 
@@ -66,7 +72,7 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
    - "Find recent research papers about BRCA1 inhibitors"
    - "What are the most promising drug candidates for targeting coronavirus proteins?"
    - "Summarize the mechanism of action for HER2 targeted therapies"
-   
+
 3. **Generate Reports**: The agent can compile comprehensive reports about specific targets or diseases
 
 ## Architecture
@@ -79,6 +85,7 @@ The Drug Discovery Agent is built using:
 - **Amazon Bedrock**: For accessing powerful language models like Claude
 
 Each MCP server provides specialized tools for accessing different scientific databases:
+
 - `mcp_server_arxiv.py`: Search and retrieve scientific papers from arXiv
 - `mcp_server_chembl.py`: Access chemical and bioactivity data from ChEMBL
 - `mcp_server_clinicaltrial.py`: Search and analyze clinical trials
@@ -86,22 +93,27 @@ Each MCP server provides specialized tools for accessing different scientific da
 - `mcp_server_tavily.py`: Perform web searches for recent information
 
 ## Limitations
+
 - This repository is intended for Proof of Concept (PoC) and demonstration purposes only. It is NOT intended for commercial or production use.
 - The agent relies on external APIs which may have rate limits
 - Information is limited to what's available in the connected databases
 
 ## Future Enhancements
+
 - Integration with additional drug discovery tools and databases
 - Enhanced visualization of molecular structures and interactions
 - Support for proprietary research databases
 
 ## Contributors
+
 - Hasun Yu, Ph.D. (AWS AI/ML Specialist Solutions Architect) | [Mail](mailto:hasunyu@amazon.com) | [LinkedIn](https://www.linkedin.com/in/hasunyu/)
 
 ## Citation
+
 - If you find this repository useful, please consider giving a star ⭐ and citation
 
 ## References
+
 - [Strands Agents SDK](https://strandsagents.com/0.1.x/)
 - [Strands Agents Samples](https://github.com/strands-agents/samples/tree/main)
 - [Strands Agents Samples - Korean](https://github.com/kyopark2014/strands-agent)

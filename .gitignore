@@ -12,3 +12,4 @@ venv*
 .env
 .DS_Store
 *.ttf
+csr_results.txt

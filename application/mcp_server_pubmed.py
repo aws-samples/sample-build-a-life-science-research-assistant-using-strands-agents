@@ -1,8 +1,8 @@
 from mcp.server.fastmcp import FastMCP
 import logging
 import sys
-import requests
-import xml.etree.ElementTree as ET
+import httpx
+from defusedxml import ElementTree as ET
 from typing import List, Dict, Any, Optional
 
 logging.basicConfig(
@@ -48,7 +48,7 @@ def search_pubmed(query: str, max_results: int = 10) -> List[Dict[str, Any]]:
     }
     
     try:
-        search_response = requests.get(search_url, params=search_params)
+        search_response = httpx.get(search_url, params=search_params)
         search_response.raise_for_status()
         search_data = search_response.json()
         
@@ -65,7 +65,7 @@ def search_pubmed(query: str, max_results: int = 10) -> List[Dict[str, Any]]:
             "retmode": "xml"
         }
         
-        fetch_response = requests.get(fetch_url, params=fetch_params)
+        fetch_response = httpx.get(fetch_url, params=fetch_params)
         fetch_response.raise_for_status()
         
         # Parse XML response
@@ -145,7 +145,7 @@ def get_pubmed_article_details(pmid: str) -> Optional[Dict[str, Any]]:
     }
     
     try:
-        fetch_response = requests.get(fetch_url, params=fetch_params)
+        fetch_response = httpx.get(fetch_url, params=fetch_params)
         fetch_response.raise_for_status()
         
         # Parse XML response

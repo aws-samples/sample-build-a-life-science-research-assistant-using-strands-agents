@@ -30,7 +30,12 @@ def main():
     for server in mcp_servers:
         print(f"Starting {server}...")
         
-        # Start server
+        # Validate server path before execution
+        if not os.path.isfile(server) or not server.startswith("application/mcp_server_"):
+            print(f"Error: Invalid server path {server}")
+            continue
+            
+        # Start server with validated path
         process = subprocess.Popen(
             [sys.executable, server],
             stdout=subprocess.PIPE,

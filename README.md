@@ -1,6 +1,4 @@
-<h1 align="left"><b>Drug Discovery Agent based on Amazon Bedrock</b></h1>
-
-- - -
+# Build a Life Science Research Assistant Using Strands Agents
 
 ## Overview
 

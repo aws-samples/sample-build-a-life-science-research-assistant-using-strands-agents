@@ -1,3 +1,9 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+# Adapted from https://github.com/kyopark2014/strands-agent
+# SPDX-License-Identifier: MIT
+
 import streamlit as st
 import chat
 import logging

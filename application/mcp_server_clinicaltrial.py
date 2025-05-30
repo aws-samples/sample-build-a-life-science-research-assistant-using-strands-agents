@@ -1,4 +1,9 @@
-# REF: https://github.com/JackKuo666/ClinicalTrials-MCP-Server
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+# Adapted from https://github.com/JackKuo666/ClinicalTrials-MCP-Server
+# SPDX-License-Identifier: MIT
+
 from mcp.server.fastmcp import FastMCP, Context
 from pytrials.client import ClinicalTrials
 import pandas as pd

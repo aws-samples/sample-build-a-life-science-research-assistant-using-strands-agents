@@ -1,3 +1,9 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+# Adapted from https://github.com/RamXX/mcp-tavily
+# SPDX-License-Identifier: MIT
+
 from mcp.server.fastmcp import FastMCP
 import logging
 import sys

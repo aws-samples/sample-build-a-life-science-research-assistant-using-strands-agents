@@ -30,7 +30,10 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 - Install required Python packages using `pip install -r requirements.txt`.
 - Visit [tavily.com](https://tavily.com/) to create a account and generate an API key.
 - Obtain [long-term](https://docs.aws.amazon.com/sdkref/latest/guide/access-iam-users.html) or (preferred) [short-term](https://docs.aws.amazon.com/sdkref/latest/guide/access-temp-idc.html) AWS credentials.
-- [Request access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access-modify.html) to the Amazon Bedrock **Anthropic Claude 3.7 Sonnet** foundation model in the `us-west-2` region.
+- [Request access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access-modify.html) to the following Amazon Bedrock foundation models in the `us-west-2` region:
+  - Anthropic Claude 3.7 Sonnet
+  - Anthropic Claude 3.5 Sonnet
+  - Anthropic Claude 3.5 Haiku
 
 ### Installation
 

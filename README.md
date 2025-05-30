@@ -27,41 +27,39 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 
 ### Prerequisites
 
-- Required Python packages (install using `pip install -r requirements.txt`)
-- AWS credentials configured
-- API keys for external services (Tavily)
+- Install required Python packages using `pip install -r requirements.txt`.
+- Visit [tavily.com](https://tavily.com/) to create a account and generate an API key.
+- Obtain [long-term](https://docs.aws.amazon.com/sdkref/latest/guide/access-iam-users.html) or (preferred) [short-term](https://docs.aws.amazon.com/sdkref/latest/guide/access-temp-idc.html) AWS credentials.
+- [Request access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access-modify.html) to the Amazon Bedrock **Anthropic Claude 3.7 Sonnet** foundation model in the `us-west-2` region.
 
 ### Installation
 
 1. Clone this repository
-2. Install dependencies:
+2. Install the required Python dependencies.
 
-   ```
+   ```sh
    pip install -r requirements.txt
    ```
 
-3. Set up environment variables:
-   - Copy `.env.example` to `.env`
-   - Add your API keys to the `.env` file
-   - Download ttf file for a font you will use and move it to `assets/` and change `font_path` in `chat.py`
+3. Configure your AWS credentials by [setting them as environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html), [adding them to a credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), or following another [supported process](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-authentication.html).
+
+4. Save your Tavily API key to a `.env` file in the following format:
+
+   ```sh
+   TAVILY_API_KEY="YOUR_API_KEY"
+   ```
+
+5. (Optional) Download ttf file for a font you will use and move it to `assets/` and change `font_path` in `chat.py`
 
 ### Running the Application
 
-1. Start the MCP servers (Model Context Protocol servers that connect to external data sources):
+1. Start the Streamlit web interface:
 
-   ```
-   python application/launcher.py
-   ```
-
-   This will launch all necessary MCP servers for arXiv, PubMed, ChEMBL, ClinicalTrials.gov, and Tavily.
-
-2. Start the Streamlit web interface:
-
-   ```
+   ```sh
    streamlit run application/app.py
    ```
 
-3. Open your browser and navigate to the URL displayed in the terminal (typically <http://localhost:8501>)
+2. Open your browser and navigate to the URL displayed in the terminal (typically <http://localhost:8501>)
 
 ## Using the Drug Discovery Agent
 

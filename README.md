@@ -43,7 +43,7 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 3. Set up environment variables:
    - Copy `.env.example` to `.env`
    - Add your API keys to the `.env` file
-   - Download ttf file for a font you will use and move it to `assets/` and change `font_path` in `app.py`
+   - Download ttf file for a font you will use and move it to `assets/` and change `font_path` in `chat.py`
 
 ### Running the Application
 

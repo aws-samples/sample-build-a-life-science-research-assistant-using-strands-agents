@@ -2,7 +2,6 @@
 *.py[cod]
 *$py.class
 *_test_*
-*test*py*
 venv*
 .chembl*
 *.csv
@@ -11,5 +10,6 @@ venv*
 *reports/*
 .env
 .DS_Store
-*.ttf
 csr_results.txt
+.venv
+.kiro

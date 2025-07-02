@@ -5,185 +5,185 @@ nova_premier = [
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "nova",
-        "model_id": "us.amazon.nova-premier-v1:0"    
+        "model_id": "us.amazon.nova-premier-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "nova",
-        "model_id": "us.amazon.nova-premier-v1:0"
+        "model_id": "us.amazon.nova-premier-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "nova",
-        "model_id": "us.amazon.nova-premier-v1:0"
-    }
+        "model_id": "us.amazon.nova-premier-v1:0",
+    },
 ]
 
-nova_pro_models = [   # Nova Pro
-    {   
+nova_pro_models = [  # Nova Pro
+    {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "nova",
-        "model_id": "us.amazon.nova-pro-v1:0"
+        "model_id": "us.amazon.nova-pro-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "nova",
-        "model_id": "us.amazon.nova-pro-v1:0"
+        "model_id": "us.amazon.nova-pro-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "nova",
-        "model_id": "us.amazon.nova-pro-v1:0"
-    }
+        "model_id": "us.amazon.nova-pro-v1:0",
+    },
 ]
 
-nova_lite_models = [   # Nova Lite
-    {   
+nova_lite_models = [  # Nova Lite
+    {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "nova",
-        "model_id": "us.amazon.nova-lite-v1:0"
-    },
-    {
-        "bedrock_region": "us-east-1",  # N.Virginia
-        "model_type": "nova",
-        "model_id": "us.amazon.nova-lite-v1:0"
-    },
-    {
-        "bedrock_region": "us-east-2",  # Ohio
-        "model_type": "nova",
-        "model_id": "us.amazon.nova-lite-v1:0"
-    }
-]
-
-nova_micro_models = [   # Nova Micro
-    {   
-        "bedrock_region": "us-west-2",  # Oregon
-        "model_type": "nova",
-        "model_id": "us.amazon.nova-micro-v1:0"
+        "model_id": "us.amazon.nova-lite-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "nova",
-        "model_id": "us.amazon.nova-micro-v1:0"
+        "model_id": "us.amazon.nova-lite-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "nova",
-        "model_id": "us.amazon.nova-micro-v1:0"
-    }
+        "model_id": "us.amazon.nova-lite-v1:0",
+    },
 ]
 
-claude_3_7_sonnet_models = [   # Sonnet 3.7
+nova_micro_models = [  # Nova Micro
+    {
+        "bedrock_region": "us-west-2",  # Oregon
+        "model_type": "nova",
+        "model_id": "us.amazon.nova-micro-v1:0",
+    },
+    {
+        "bedrock_region": "us-east-1",  # N.Virginia
+        "model_type": "nova",
+        "model_id": "us.amazon.nova-micro-v1:0",
+    },
+    {
+        "bedrock_region": "us-east-2",  # Ohio
+        "model_type": "nova",
+        "model_id": "us.amazon.nova-micro-v1:0",
+    },
+]
+
+claude_3_7_sonnet_models = [  # Sonnet 3.7
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+        "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+        "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
-    }
+        "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+    },
 ]
 
-claude_3_5_sonnet_v1_models = [   # Sonnet 3.5 V1
+claude_3_5_sonnet_v1_models = [  # Sonnet 3.5 V1
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "claude",
-        "model_id": "anthropic.claude-3-5-sonnet-20240620-v1:0"
+        "model_id": "anthropic.claude-3-5-sonnet-20240620-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "claude",
-        "model_id": "anthropic.claude-3-5-sonnet-20240620-v1:0"
+        "model_id": "anthropic.claude-3-5-sonnet-20240620-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-5-sonnet-20240620-v1:0"
-    }
+        "model_id": "us.anthropic.claude-3-5-sonnet-20240620-v1:0",
+    },
 ]
 
-claude_3_5_sonnet_v2_models = [   # Sonnet 3.5 V2
+claude_3_5_sonnet_v2_models = [  # Sonnet 3.5 V2
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "claude",
-        "model_id": "anthropic.claude-3-5-sonnet-20241022-v2:0"
+        "model_id": "anthropic.claude-3-5-sonnet-20241022-v2:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-5-sonnet-20241022-v2:0"
+        "model_id": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-5-sonnet-20241022-v2:0"
-    }
+        "model_id": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+    },
 ]
 
-claude_3_0_sonnet_models = [   # Sonnet 3.0
+claude_3_0_sonnet_models = [  # Sonnet 3.0
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "claude",
-        "model_id": "anthropic.claude-3-sonnet-20240229-v1:0"
+        "model_id": "anthropic.claude-3-sonnet-20240229-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "claude",
-        "model_id": "anthropic.claude-3-sonnet-20240229-v1:0"
-    }
+        "model_id": "anthropic.claude-3-sonnet-20240229-v1:0",
+    },
 ]
 
-claude_3_5_haiku_models = [   # Haiku 3.5 
+claude_3_5_haiku_models = [  # Haiku 3.5
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "claude",
-        "model_id": "anthropic.claude-3-5-haiku-20241022-v1:0"
+        "model_id": "anthropic.claude-3-5-haiku-20241022-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-5-haiku-20241022-v1:0"
+        "model_id": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-3-5-haiku-20241022-v1:0"
-    }
+        "model_id": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
+    },
 ]
 
-claude_4_sonnet_models = [   # Claude 4 Sonnet
+claude_4_sonnet_models = [  # Claude 4 Sonnet
     {
         "bedrock_region": "us-west-2",  # Oregon
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0"
+        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
     },
     {
         "bedrock_region": "us-east-1",  # N.Virginia
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0"
+        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
     },
     {
         "bedrock_region": "us-east-2",  # Ohio
         "model_type": "claude",
-        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0"
-    }
+        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    },
 ]
 
 
 def get_model_info(model_name):
     """
     Get model information based on model name.
-    
+
     Args:
         model_name (str): Name of the model
-        
+
     Returns:
         list: List of model configurations
     """
@@ -211,17 +211,17 @@ def get_model_info(model_name):
     return models
 
 
-STOP_SEQUENCE_CLAUDE = "\n\nHuman:" 
+STOP_SEQUENCE_CLAUDE = "\n\nHuman:"
 STOP_SEQUENCE_NOVA = '"\n\n<thinking>", "\n<thinking>", " <thinking>"'
 
 
 def get_stop_sequence(model_name):
     """
     Get stop sequence based on model name.
-    
+
     Args:
         model_name (str): Name of the model
-        
+
     Returns:
         str: Stop sequence for the model
     """

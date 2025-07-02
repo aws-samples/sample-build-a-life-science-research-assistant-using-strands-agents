@@ -7,8 +7,9 @@
 import logging
 import sys
 
-import chat
 import streamlit as st
+
+import chat
 
 logging.basicConfig(
     level=logging.INFO,  # Default to INFO level
@@ -37,14 +38,23 @@ with st.sidebar:
     # model selection box
     modelName = st.selectbox(
         "🖊️ Choose your foundation model for analysis",
-        ("Claude 4 Sonnet", "Claude 3.7 Sonnet", "Claude 3.5 Sonnet", "Claude 3.5 Haiku"),
+        (
+            "Claude 4 Sonnet",
+            "Claude 3.7 Sonnet",
+            "Claude 3.5 Sonnet",
+            "Claude 3.5 Haiku",
+        ),
         index=0,
     )
 
     # extended thinking for Claude 4 Sonnet and Claude 3.7 Sonnet
-    select_reasoning = st.checkbox("Reasoning (Claude 4 Sonnet and Claude 3.7 Sonnet)", value=False)
+    select_reasoning = st.checkbox(
+        "Reasoning (Claude 4 Sonnet and Claude 3.7 Sonnet)", value=False
+    )
     reasoningMode = (
-        "Enable" if select_reasoning and modelName in ["Claude 4 Sonnet", "Claude 3.7 Sonnet"] else "Disable"
+        "Enable"
+        if select_reasoning and modelName in ["Claude 4 Sonnet", "Claude 3.7 Sonnet"]
+        else "Disable"
     )
     logger.info(f"reasoningMode: {reasoningMode}")
 

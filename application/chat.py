@@ -9,7 +9,6 @@ import sys
 import traceback
 import uuid
 
-import info
 from botocore.config import Config
 from mcp import StdioServerParameters, stdio_client
 from reportlab.lib.pagesizes import letter
@@ -22,6 +21,8 @@ from strands.agent.conversation_manager import SlidingWindowConversationManager
 from strands.models import BedrockModel
 from strands.tools.mcp import MCPClient
 from strands_tools import file_write
+
+import info
 
 logging.basicConfig(
     level=logging.INFO,  # Default to INFO level
@@ -84,15 +85,13 @@ def get_model():
             "type": "enabled",
             "budget_tokens": thinking_budget,
         }
-        
-        additional_fields = {
-            "thinking": thinking_config
-        }
-        
+
+        additional_fields = {"thinking": thinking_config}
+
         # Add interleaved thinking for Claude 4 Sonnet using anthropic_beta parameter
         if model_name == "Claude 4 Sonnet":
             additional_fields["anthropic_beta"] = ["interleaved-thinking-2025-05-14"]
-        
+
         model = BedrockModel(
             boto_client_config=Config(
                 read_timeout=900,

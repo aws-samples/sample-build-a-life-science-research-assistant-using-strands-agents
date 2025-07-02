@@ -158,6 +158,24 @@ claude_3_5_haiku_models = [   # Haiku 3.5
     }
 ]
 
+claude_4_sonnet_models = [   # Claude 4 Sonnet
+    {
+        "bedrock_region": "us-west-2",  # Oregon
+        "model_type": "claude",
+        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0"
+    },
+    {
+        "bedrock_region": "us-east-1",  # N.Virginia
+        "model_type": "claude",
+        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0"
+    },
+    {
+        "bedrock_region": "us-east-2",  # Ohio
+        "model_type": "claude",
+        "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0"
+    }
+]
+
 
 def get_model_info(model_name):
     """
@@ -177,6 +195,8 @@ def get_model_info(model_name):
         models = nova_lite_models
     elif model_name == "Nova Micro":
         models = nova_micro_models
+    elif model_name == "Claude 4 Sonnet":
+        models = claude_4_sonnet_models
     elif model_name == "Claude 3.7 Sonnet":
         models = claude_3_7_sonnet_models
     elif model_name == "Claude 3.0 Sonnet":

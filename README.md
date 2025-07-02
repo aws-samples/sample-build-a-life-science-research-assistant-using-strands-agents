@@ -29,6 +29,7 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 - Visit [tavily.com](https://tavily.com/) to create a account and generate an API key.
 - Obtain [long-term](https://docs.aws.amazon.com/sdkref/latest/guide/access-iam-users.html) or (preferred) [short-term](https://docs.aws.amazon.com/sdkref/latest/guide/access-temp-idc.html) AWS credentials.
 - [Request access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access-modify.html) to the following Amazon Bedrock foundation models in the `us-west-2` region:
+  - Anthropic Claude 4 Sonnet
   - Anthropic Claude 3.7 Sonnet
   - Anthropic Claude 3.5 Sonnet
   - Anthropic Claude 3.5 Haiku
@@ -64,7 +65,7 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
 
 ## Using the Drug Discovery Agent
 
-1. **Select a Model**: Choose from available foundation models (Claude 3.7 Sonnet, Claude 3.5 Sonnet, or Claude 3.5 Haiku)
+1. **Select a Model**: Choose from available foundation models (Claude 4 Sonnet, Claude 3.7 Sonnet, Claude 3.5 Sonnet, or Claude 3.5 Haiku)
 
 2. **Ask Questions**: Examples of questions you can ask:
    - "Please generate a report for HER2 including recent news, recent research, related compounds, and ongoing clinical trials."

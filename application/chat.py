@@ -79,6 +79,20 @@ def get_model():
     thinking_budget = min(maxOutputTokens, maxReasoningOutputTokens - 1000)
 
     if reasoning_mode == "Enable":
+        # Configure thinking parameters
+        thinking_config = {
+            "type": "enabled",
+            "budget_tokens": thinking_budget,
+        }
+        
+        additional_fields = {
+            "thinking": thinking_config
+        }
+        
+        # Add interleaved thinking for Claude 4 Sonnet using anthropic_beta parameter
+        if model_name == "Claude 4 Sonnet":
+            additional_fields["anthropic_beta"] = ["interleaved-thinking-2025-05-14"]
+        
         model = BedrockModel(
             boto_client_config=Config(
                 read_timeout=900,
@@ -89,12 +103,7 @@ def get_model():
             max_tokens=64000,
             stop_sequences=[STOP_SEQUENCE],
             temperature=1,
-            additional_request_fields={
-                "thinking": {
-                    "type": "enabled",
-                    "budget_tokens": thinking_budget,
-                }
-            },
+            additional_request_fields=additional_fields,
         )
     else:
         model = BedrockModel(

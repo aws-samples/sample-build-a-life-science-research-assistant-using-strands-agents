@@ -4,8 +4,15 @@
 # Adapted from https://github.com/kyopark2014/strands-agent
 # SPDX-License-Identifier: MIT
 
-import logging
+import asyncio
 import sys
+
+# Set the correct asyncio event loop policy if using Windows
+# BEFORE streamlit has a chance to create its own default loop - which does not allow subprocess managing, causing it to break before anything.
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
+import logging
 
 import streamlit as st
 

@@ -683,6 +683,17 @@ class MCPClientSessionManager:
 # Global session manager instance
 _session_manager = MCPClientSessionManager()
 
+# --- FIX: Tool Call Limiter ---
+# A simple dictionary to count tool calls within a single user request. Prevents from calling a single tool too many times, resulting in token overflow.
+TOOL_CALL_COUNTS = {}
+MAX_CALLS_PER_TOOL = 10  # Temporary limit
+
+def reset_tool_call_counts():
+    """Resets the tool call counter. Should be called on each new user request."""
+    global TOOL_CALL_COUNTS
+    TOOL_CALL_COUNTS = {} 
+# --- END FIX --- 
+
 #########################################################
 # Agent Tool Wrappers for Orchestrator
 #########################################################
@@ -717,6 +728,15 @@ def arxiv_research_agent(query: str) -> str:
     Returns:
         Summarized findings from Arxiv papers
     """
+
+    # --- FIX: Tool Call Limiter Check ---
+    tool_name = "arxiv_research_agent"
+    call_count = TOOL_CALL_COUNTS.get(tool_name, 0)
+    if call_count >= MAX_CALLS_PER_TOOL:
+        return f"Error: The {tool_name} has been called too many times for this query. Aborting to prevent loops."
+    TOOL_CALL_COUNTS[tool_name] = call_count + 1
+    # --- END FIX ---
+    
     client = _session_manager.get_client("arxiv")
     if client is None:
         return "Error: Arxiv client session not available"

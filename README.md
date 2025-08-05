@@ -43,6 +43,8 @@ The Drug Discovery Agent is an AI-powered agent designed to assist pharmaceutica
    pip install -r requirements.txt
    ```
 
+   or if you have `uv` installed `uv sync`
+
 3. Configure your AWS credentials by [setting them as environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html), [adding them to a credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), or following another [supported process](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-authentication.html).
 
 4. Save your Tavily API key to a `.env` file in the following format:
